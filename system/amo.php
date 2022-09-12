@@ -1,18 +1,18 @@
 <?php
 require_once 'access.php';
 
-$name = 'заявка Мамедов';
+$name = 'заявка';
 $phone = $_POST['phone'];
 $email = $_POST['email'];
-$target = 'тест цель Мамедов';
-$company = 'тест компания Мамедов';
+$target = 'тест цель';
+$company = 'тест компания';
 
-$domain = 'http://f0717740.xsph.ru/';
-$pipeline_id = 5756950;
+$domain = 'ваш сайт';
+$pipeline_id = 'ваш id воронки';
 $user_amo = 0;
 
 $mail = 'почта: ' . $email . PHP_EOL . 'телефон: ' . $phone;
-mail('order@salesgenerator.pro, mamedovproofix@gmail.com', 'Заявка Мамедов', $mail);
+mail('your@email.com', 'Заявка', $mail);
 
 $data = [
     [
