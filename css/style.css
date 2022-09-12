@@ -1,0 +1,334 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    margin: 5%;
+}
+
+.popup-open {
+    width: 235px;
+    height: 70px;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.popup-open:active {
+    background-color: #d9092c;
+}
+
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+
+.popup-bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 909px;
+    transition: 0.5s all;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+    background-color: #ffffff;
+    position: absolute;
+    width: 909px;
+    height: 555px;
+    border-radius: 27px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 21px;
+    right: 18px;
+    cursor: pointer;
+    color: #ff0000;
+    width: 16px;
+    height: 16px;
+}
+
+.popup-title {
+    position: absolute;
+    top: 54px;
+    left: 50px;
+    font-size: 26pt;
+    font-weight: 700;
+}
+
+.popup-icons {
+    position: absolute;
+    top: 191px;
+    left: 53px;
+    width: 326px;
+    height: 44px;
+}
+
+.popup-image {
+    position: absolute;
+    top: 256px;
+    left: 30px;
+    width: 424px;
+    height: 302px;
+}
+
+.popup-input-email {
+    position: absolute;
+    top: 186px;
+    right: 52px;
+}
+
+.label {
+    font-size: 11pt;
+    font-weight: 600;
+}
+
+.popup-input-phone {
+    position: absolute;
+    top: 293px;
+    right: 52px;
+}
+
+.popup-field {
+    width: 334px;
+    height: 52px;
+    border-radius: 5px;
+    border-color: #a0a0a0;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 9px;
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+input {
+    padding-left: 15px;
+}
+
+.popup-field::placeholder {
+    color: #a0a0a0;
+}
+
+.popup-btn {
+    position: absolute;
+    top: 385px;
+    right: 52px;
+}
+
+.popup-btn-send {
+    width: 355px;
+    height: 77px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background: linear-gradient(#3cc36d, #3cc36d);
+    border-style: none;
+    margin-top: 15px;
+    cursor: pointer;
+    border-bottom: #36aa60;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
+}
+
+.popup-btn-send:active {
+    background: #36aa60;
+}
+
+.popup-btn-text {
+    position: absolute;
+    top: 34px;
+    left: 49px;
+    color: #ffffff;
+    font-size: 18.5pt;
+    font-weight: 600;
+}
+
+.popup-btn-sign {
+    position: absolute;
+    top: 32px;
+    right: 53px;
+    width: 35px;
+    height: 39px;
+}
+
+.popup-btn-info {
+    position: absolute;
+    margin-top: 13px;
+    right: 61px;
+    color: #a0a0a0;
+    font-size: 9pt;
+    font-weight: 600;
+}
+
+.popup-alert {
+    position: absolute;
+    top: 107px;
+    right: 52px;
+    width: 353px;
+    height: 56px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 320px;
+        transition: 0.5s all;
+    }
+
+    .popup.active {
+        transform: translate(-50%, -50%) scale(1);
+        transition: 0.5s all;
+        background-color: #ffffff;
+        position: absolute;
+        width: 320px;
+        height: 540px;
+        border-radius: 15px;
+    }
+
+    .popup-close {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        cursor: pointer;
+        color: #ff0000;
+        width: 18px;
+        height: 18px;
+    }
+
+    .popup-image {
+        position: absolute;
+        top: 14px;
+        left: 46px;
+        width: 228px;
+        height: 163px;
+    }
+
+    .popup-icons {
+        position: absolute;
+        top: 153px;
+        left: 31px;
+        width: 258px;
+        height: 35px;
+        z-index: 1;
+    }
+
+    .popup-title {
+        position: absolute;
+        top: 215px;
+        left: 32px;
+        font-size: 15pt;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .popup-input-email {
+        position: absolute;
+        top: 289px;
+        right: 17.5px;
+    }
+
+    .popup-input-phone {
+        position: absolute;
+        top: 375px;
+        right: 17.5px;
+    }
+
+    .label {
+        font-size: 9pt;
+        font-weight: 600;
+    }
+
+    .popup-field {
+        width: 266px;
+        height: 42px;
+        border-radius: 5px;
+        border-color: #a0a0a0;
+        border-style: solid;
+        border-width: 1px;
+        margin-top: 7px;
+        font-size: 16pt;
+        font-weight: 400;
+    }
+
+    input {
+        padding-left: 15px;
+    }
+
+    .popup-field::placeholder {
+        color: #a0a0a0;
+    }
+
+    .popup-btn {
+        position: absolute;
+        top: 451px;
+        right: 17.5px;
+    }
+
+    .popup-btn-send {
+        width: 285px;
+        height: 62px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        background: linear-gradient(#3cc36d, #3cc36d);
+        border-style: none;
+        margin-top: 12px;
+        cursor: pointer;
+        border-bottom: #36aa60;
+        border-bottom-width: 6px;
+        border-bottom-style: solid;
+    }
+
+    .popup-btn-send:active {
+        background: #36aa60;
+    }
+
+    .popup-btn-text {
+        position: absolute;
+        top: 28px;
+        left: 40px;
+        color: #ffffff;
+        font-size: 15pt;
+        font-weight: 600;
+    }
+
+    .popup-btn-sign {
+        position: absolute;
+        top: 28px;
+        right: 43px;
+        width: 28px;
+        height: 31px;
+    }
+
+    .popup-btn-info {
+        display: none;
+    }
+}
